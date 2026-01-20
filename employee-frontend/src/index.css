@@ -1,0 +1,155 @@
+/* 🌐 GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #f1f8ff);
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+/* 🧱 MAIN CONTAINER */
+.container {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* 🏷️ TITLE */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0369a1;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* 🧩 CARD */
+.card {
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(3, 105, 161, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(3, 105, 161, 0.15);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #0284c7;
+  font-size: 22px;
+}
+
+/* ✍️ FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+/* 🔘 BUTTONS */
+button {
+  padding: 11px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* PRIMARY */
+button[type="submit"],
+button.save {
+  background: linear-gradient(135deg, #0284c7, #0ea5e9);
+  color: #ffffff;
+}
+
+button[type="submit"]:hover,
+button.save:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* SECONDARY */
+button.edit {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+button.edit:hover {
+  background: #bae6fd;
+}
+
+/* DELETE */
+button.delete {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+button.delete:hover {
+  background: #fecaca;
+}
+
+/* 📋 EMPLOYEE ROW */
+.row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 0.8fr auto auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row span {
+  font-size: 14px;
+}
+
+/* ✏️ EDIT MODE */
+.row input {
+  padding: 8px;
+  font-size: 13px;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
